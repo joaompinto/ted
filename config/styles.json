@@ -1,0 +1,18 @@
+{
+    "default": {"style": "fore:#C0C0C0,back:#1E1E1E"},
+    "comment": {"style": "fore:#6A9955,italic,back:#1E1E1E"},
+    "number": {"style": "fore:#B5CEA8,back:#1E1E1E"},
+    "string": {"style": "fore:#CE9178,back:#1E1E1E"},
+    "character": {"style": "fore:#CE9178,back:#1E1E1E"},
+    "word": {"style": "fore:#569CD6,bold,back:#1E1E1E"},
+    "triple": {"style": "fore:#CE9178,back:#1E1E1E"},
+    "tripledouble": {"style": "fore:#CE9178,back:#1E1E1E"},
+    "classname": {"style": "fore:#4EC9B0,bold,back:#1E1E1E"},
+    "defname": {"style": "fore:#DCDCAA,bold,back:#1E1E1E"},
+    "operator": {"style": "bold,fore:#D4D4D4,back:#1E1E1E"},
+    "identifier": {"style": "fore:#C0C0C0,back:#1E1E1E"},
+    "commentblock": {"style": "fore:#6A9955,italic,back:#1E1E1E"},
+    "stringeol": {"style": "fore:#000000,back:#E0C0E0,eolfilled"},
+    "word2": {"style": "fore:#C586C0,back:#1E1E1E"},
+    "decorator": {"style": "fore:#D7BA7D,back:#1E1E1E"}
+}
