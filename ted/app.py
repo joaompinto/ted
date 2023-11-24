@@ -2,16 +2,18 @@ import sys
 from PySide6.QtWidgets import QApplication, QStyleFactory
 from ted.ide_window import IDEWindow
 
-def main():
+def main(name: str):
 
-    # Create the Qt Application
-    app = QApplication(sys.argv)
+    if name == "__main__":
 
-    # Set the application style to Windows native
-    app.setStyle(QStyleFactory.create("Fusion"))
+        # Create the Qt Application
+        app = QApplication(sys.argv)
 
-    # Create an instance of the IDEWindow
-    mainWin = IDEWindow()
-    mainWin.show()
+        # Set the application style to Windows native
+        app.setStyle(QStyleFactory.create("Fusion"))
 
-    sys.exit(app.exec())
+        # Create an instance of the IDEWindow
+        mainWin = IDEWindow()
+        mainWin.show()
+
+        sys.exit(app.exec())
