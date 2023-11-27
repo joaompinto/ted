@@ -1,4 +1,6 @@
 # the Tiny EDitor
 
-python main.py
-
+```
+pip install -r requirements.txt
+python -m ted
+```

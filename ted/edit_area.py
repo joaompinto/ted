@@ -2,6 +2,8 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QTextEdit
 from PySide6.QtGui import QTextCursor, QFont, QKeyEvent, QWheelEvent
 
+META_SYMBOL = "→"
+
 class EditArea(QTextEdit):
 
     def __init__(self, parent=None):
@@ -13,6 +15,7 @@ class EditArea(QTextEdit):
         self.setTabWidth(4)
 
         self.changing_tabs = False
+
 
     def setFontSize(self, size):
         font = QFont()
@@ -45,6 +48,7 @@ class EditArea(QTextEdit):
         else:
             super().keyPressEvent(event)  # Handle other key events normally
 
+
     def unindentLine(self):
         print("Unindenting line")
 
@@ -70,3 +74,17 @@ class EditArea(QTextEdit):
         cursor.movePosition(QTextCursor.StartOfLine)
         cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, chars_to_remove)
         cursor.removeSelectedText()
+
+
+    def getCurrentLineCursorPosition(self):
+        cursor = self.textCursor()
+        # Position of the cursor in the document
+        absolute_position = cursor.position()
+
+        # Position of the beginning of the line in the document
+        line_start_position = cursor.block().position()
+
+        # Position of the cursor in the current line
+        line_cursor_position = absolute_position - line_start_position
+        return line_cursor_position
+
